@@ -9,28 +9,61 @@ ingest log containing IP data for which we want geolocalization data
 Components
 ----------
 
-Medical Payments Analytics consists of:
+IPGeodecode consists of:
 
      1) Python scripts.  These do not need to be compiled.
      2) Output logs. 	 
+     3) Webserver. 		 Connect the decoding to a front end
 
 
 Building
 --------
 
 This project is build around concepts of functionality. No state are kept in
-memory and no building is required beyong setting up the database
+memory and no compiling is required
+
+
+Dependecies
+------------
+
+pip install geocoder
+pip install pygeoip
+pip install IPWhois
+pip install geopy
+pip install docopt
+
+Provider		Optimal	Access
+ArcGIS			World	 
+Baidu			China	API key
+Bing			World	API key
+CanadaPost		Canada	API key
+FreeGeoIP		World	 
+Geocoder.ca		North America	Rate Limit
+GeoNames		World	Username
+GeoOttawa		Ottawa	 
+Google			World	Rate Limit
+HERE			World	API key
+IPInfo			World	 
+Mapbox			World	API key
+MapQuest		World	API key
+MaxMind			World	 
+OpenCage		World	API key
+OpenStreetMap	World	 
+TomTom			World	API key
+What3Words		World	API key
+Yahoo			World	 
+Yandex			Russia	 
+
 
 
 Installation
 ------------
 
 
-
-
 Improvements
 ------------
 
+Exhaustive testing of accuracy across countries
 Use of IP-range to limit calls to Google Geodecode API
 
 
